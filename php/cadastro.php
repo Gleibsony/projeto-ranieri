@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Cadastro Usuario</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"
     </head>
     <body>
         <form name="meuForm" method="POST" id="formulario">
@@ -69,6 +70,7 @@
                             <option value="12">Dezenbro</option>
                         </select>
                         <select name="ano">
+                            <option value="ano">Ano</option>
                             <option value="2006">2006</option>
                             <option value="2005">2005</option>
                             <option value="2004">2004</option>
@@ -98,6 +100,10 @@
                             <option value="1980">1980</option>
                         </select>
                     </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone"
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Login e Senha</legend>
@@ -114,6 +120,9 @@
                         <input type="password" name="confirm-password" id="password">
                     </div>
                 </fieldset>
+                    <div>
+                        <input type="submit" name="enviar" id="enviar">
+                    </div>
             </div>
         </form>
     </body>

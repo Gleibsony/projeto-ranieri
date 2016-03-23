@@ -1,0 +1,8 @@
+fieldset{
+    border: 1px solid;
+    padding: 1.20rem;
+    margin: 1.20rem 0;
+}
+html, body{
+    font-size: 100%;
+}
