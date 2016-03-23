@@ -12,7 +12,7 @@
                         <label for="Nome">Nome</label>
                         <input type="text" name="nome" id="nome">
                     </div>
-                    <div>
+                    <div class="">
                         <label for="sexo">Sexo</label>
                         <select name="sexo" id="sexo">
                             <option value="empty">Selecione</option>
@@ -20,7 +20,7 @@
                             <option value="masculino">Masculino</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="">
                         <label for="datanasc">Data de nascimento</label>
                         <select name="dia">
                             <option value="01">1</option>
@@ -100,27 +100,27 @@
                             <option value="1980">1980</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="">
                         <label for="telefone">Telefone</label>
                         <input type="tel" name="telefone" id="telefone"
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Login e Senha</legend>
-                    <div>
+                    <div class="">
                         <label for="login">Login</label>
                         <input type="text" name="login" id="login">
                     </div>
-                    <div>
+                    <div class="">
                         <label for="password">Senha</label>
                         <input type="password" name="password"id="password"
                     </div>
-                    <div>
+                    <div class="">
                         <label for="confirm-password">Confirmar Senha</label>
                         <input type="password" name="confirm-password" id="password">
                     </div>
                 </fieldset>
-                    <div>
+                    <div class="">
                         <input type="submit" name="enviar" id="enviar">
                     </div>
             </div>
