@@ -1,26 +1,26 @@
 <html>
     <head>
-        <title>Cadastro Usuario</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css"
+        <title>Formulario</title>
+        <link type="text/css" href="../css/style.css">
     </head>
     <body>
-        <form name="meuForm" method="POST" id="formulario">
-            <div>
-                <fieldset>
-                    <legend>Dados Pessoais</legend>
-                    <div>
-                        <label for="Nome">Nome</label>
-                        <input type="text" name="nome" id="nome">
-                    </div>
-                    <div class="">
-                        <label for="sexo">Sexo</label>
-                        <select name="sexo" id="sexo">
-                            <option value="empty">Selecione</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="masculino">Masculino</option>
-                        </select>
-                    </div>
-                    <div class="">
+    <div class="">
+        <form action="#" method="post">
+            <fieldset class="grupo">
+                <legend>Dados Pessoais</legend>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="campo">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo">
+                        <option value="select">selecione</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                </div>
+                <div class="">
                         <label for="datanasc">Data de nascimento</label>
                         <select name="dia">
                             <option value="01">1</option>
@@ -100,30 +100,38 @@
                             <option value="1980">1980</option>
                         </select>
                     </div>
-                    <div class="">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone"
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Login e Senha</legend>
-                    <div class="">
-                        <label for="login">Login</label>
-                        <input type="text" name="login" id="login">
-                    </div>
-                    <div class="">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password"id="password"
-                    </div>
-                    <div class="">
-                        <label for="confirm-password">Confirmar Senha</label>
-                        <input type="password" name="confirm-password" id="password">
-                    </div>
-                </fieldset>
-                    <div class="">
-                        <input type="submit" name="enviar" id="enviar">
-                    </div>
-            </div>
+            </fieldset>
+            <fieldset class="grupo">
+                <legend>Curso</legend>
+                <div class="campo">
+                    <label for="matricula">Matricula</label>
+                    <input type="text" name="matricula" id="matricula">
+                </div>
+                <div class="campo">
+                    <label for="periodo">Periodo</label>
+                    <select name="periodo" id="periodo">
+                        <option value="periodo">Periodo</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="grupo">
+                <legend>Login e Senha</legend>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="campo">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="campo">
+                    <label for="confirm-password">Confirma senha</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                </div>
+            </fieldset>
         </form>
+    </div>
     </body>
 </html>
