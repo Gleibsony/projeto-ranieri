@@ -5,7 +5,7 @@
     </head>
     <body>
     <div class="">
-        <form action="#" method="post">
+        <form method="POST" accept-charset="utf-8" class="form-group" action="validacao.php" id="formulario">
             <fieldset class="grupo">
                 <legend>Dados Pessoais</legend>
                 <div class="campo">
@@ -16,8 +16,8 @@
                     <label for="sexo">Sexo</label>
                     <select name="sexo" id="sexo">
                         <option value="select">selecione</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="masculino">Masculino</option>
+                        <option value="f">Feminino</option>
+                        <option value="m">Masculino</option>
                     </select>
                 </div>
                 <div class="">
@@ -131,6 +131,7 @@
                     <input type="password" name="confirm-password" id="confirm-password">
                 </div>
             </fieldset>
+            <button type="submit" id="submit">Enviar</button>
         </form>
     </div>
     </body>
