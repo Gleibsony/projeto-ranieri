@@ -1,3 +1,3 @@
 <?php
-    include_once "php/cadastro.php";
+    include_once "php/login.php";
 ?>

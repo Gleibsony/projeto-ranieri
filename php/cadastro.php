@@ -11,11 +11,11 @@
                 <legend>Dados Pessoais</legend>
                 <div class="campo">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required>
                 </div>
                 <div class="campo">
                     <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo">
+                    <select name="sexo" id="sexo" required>
                         <option value="select">selecione</option>
                         <option value="f">Feminino</option>
                         <option value="m">Masculino</option>
@@ -106,15 +106,15 @@
                 <legend>Curso</legend>
                 <div class="campo">
                     <label for="curso">Curso</label>
-                    <input type="text" name="curso" id="curso">
+                    <input type="text" name="curso" id="curso" required>
                 </div>
                 <div class="campo">
                     <label for="matricula">Matricula</label>
-                    <input type="text" name="matricula" id="matricula">
+                    <input type="text" name="matricula" id="matricula" required>
                 </div>
                 <div class="campo">
                     <label for="periodo">Periodo</label>
-                    <select name="periodo" id="periodo">
+                    <select name="periodo" id="periodo" required>
                         <option value="periodo">Periodo</option>
                         <option value="01">1</option>
                         <option value="02">2</option>
@@ -125,15 +125,15 @@
                 <legend>Login e Senha</legend>
                 <div class="campo">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="campo">
                     <label for="password">Senha</label>
-                    <input type="password" name="senha" id="password">
+                    <input type="password" name="senha" id="password" required>
                 </div>
                 <div class="campo">
                     <label for="confirm-password">Confirma senha</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <input type="password" name="confirm-password" id="confirm-password" required>
                 </div>
             </fieldset>
             <button type="submit" id="submit">Enviar</button>
