@@ -1,6 +1,7 @@
 <html>
     <body>
         <div id="formulario">
+            
             <form method="POST" action="#">
                 <fieldset>
                     <legend>Login</legend>
@@ -14,6 +15,7 @@
                     </div>
                 </fieldset>
                 <button type="submit" id="enviar">Enviar</button>
+                <a href="php/cadastro.php">Cadastro</a>
             </form>
         </div>
     </body>

@@ -5,7 +5,7 @@
     </head>
     <body>
     <div class="">
-        <form method="POST" accept-charset="utf-8" class="form-group" action="php/validacao.php" id="formulario">
+        <form method="POST" accept-charset="utf-8" class="form-group" action="validacao.php" id="formulario">
             <input type="hidden" name="_method" value="POST">
             <fieldset class="grupo">
                 <legend>Dados Pessoais</legend>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="campo">
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="senha" id="password">
                 </div>
                 <div class="campo">
                     <label for="confirm-password">Confirma senha</label>
