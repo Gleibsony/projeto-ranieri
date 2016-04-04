@@ -5,7 +5,8 @@
     </head>
     <body>
     <div class="">
-        <form method="POST" accept-charset="utf-8" class="form-group" action="validacao.php" id="formulario">
+        <form method="POST" accept-charset="utf-8" class="form-group" action="php/validacao.php" id="formulario">
+            <input type="hidden" name="_method" value="POST">
             <fieldset class="grupo">
                 <legend>Dados Pessoais</legend>
                 <div class="campo">
@@ -20,7 +21,7 @@
                         <option value="m">Masculino</option>
                     </select>
                 </div>
-                <div class="">
+                <div class="campo">
                         <label for="datanasc">Data de nascimento</label>
                         <select name="dia">
                             <option value="01">1</option>
@@ -103,6 +104,10 @@
             </fieldset>
             <fieldset class="grupo">
                 <legend>Curso</legend>
+                <div class="campo">
+                    <label for="curso">Curso</label>
+                    <input type="text" name="curso" id="curso">
+                </div>
                 <div class="campo">
                     <label for="matricula">Matricula</label>
                     <input type="text" name="matricula" id="matricula">

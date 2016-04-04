@@ -1,46 +1,33 @@
 <?php
-session_start();
 $servername = "localhost";
-$username = "root";
+$username = "lumia";
 $password = "";
-$dbname = "deadpool";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password);
+
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-
-
-
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 
     $matricula  = $_POST ['matricula'];
-	$nome = $_POST ['nome'];
+    $nome = $_POST ['nome'];
 	$sexo = $_POST ['sexo'];
-	$dia = $_POST ['dia'];
-	$mes = $_POST ['mes'];
-	$ano = $_POST ['ano'];
-	$email  = $_POST ['email'];
+    $email  = $_POST ['email'];
 	$password  = $_POST ['password'];
     $periodo = $_POST ['periodo'];
 	$curso = $_POST ['curso'];
+    $datanasc = $nasc_dia."/".$nasc_mes."/".$nasc_ano;
 
-	$datanasc = dia."/".mes."/".ano;
+   $sqlInsert = INSERT INTO `usuario`(`matricula`, `nome`, `sexo`, `datanasc`, `curso`, `periodo`, `email`, `senha`, `id`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9])
 
-
-	$sql = "INSERT INTO `usuario`(`matricula`, `nome`, `sexo`, `datanasc`, `email`, `senha`, `confirma_senha`, `periodo`, `curso`) 
-	VALUES (`null`, '$matricula','$nome','$sexo','$datanasc','$email','$password','$periodo','$curso')";
-
-
-
-if (mysqli_query($conn, $sql)) {
+if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-mysqli_close($conn);
-
+$conn->close();
 ?>
