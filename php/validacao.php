@@ -20,12 +20,12 @@ echo "Connected successfully";
     $mes = $_POST['mes'];
     $ano = $_POST['ano'];
     $email  = $_POST['email'];
-	$senha  = $_POST['senha'];
+	$senha  = md5($_POST['senha']);
     $periodo = $_POST['periodo'];
 	$curso = $_POST['curso'];
     $datanasc = $dia."/".$mes."/".$ano;
 
-   $sql = "INSERT INTO `usuario`(`matricula`, `nome`, `sexo`, `datanasc`, `curso`, `periodo`, `email`, `senha`, `id`) VALUES ('$matricula','$nome','$sexo','$datanasc','$curso','$periodo','$curso','$email','$senha')";
+   $sql = "INSERT INTO `usuario`(`matricula`, `nome`, `sexo`, `datanasc`, `curso`, `periodo`, `email`, `senha`) VALUES ('$matricula','$nome','$sexo','$datanasc','$curso','$periodo','$email','$senha')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
