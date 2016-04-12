@@ -24,13 +24,24 @@
             $user = $_POST['usuario'];
             $pass = $_POST['senha'];
             
+            $server = "localhost";
+	       $username = "root";
+	       $password = "";
+	       $dbname = "lumia";
+
+	
+	$link = mysqli_connect ($server, $username, $password, $dbname);
+            
             if(empty($user)){
                 echo "<script>alert('Preencha todos os campos para logar,); histori.back();</script>";
             }
             elseif(empty($pass)){
                 echo "<script>alert('Preencha todos os campos para logar,); histori.back();</script>";
             }else{
-                $query1 = mysql_num_rows(mysql_query("SELECT * FROM usuario WHERE usuario = '$user' AND senha = '$pass'"));
+                $result = mysql_query("SELECT * FROM nome WHERE nome = '$user' AND senha = '$pass'");
+                echo mysql_error();
+                $query1 = mysql_num_rows($result);
+                
                 if($query1 == 1){
                     echo "<script>alert('usuario logado com sucesso'); history.back();</script>";
                 }
