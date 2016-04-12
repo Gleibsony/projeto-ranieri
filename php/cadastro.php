@@ -4,7 +4,7 @@
         <link type="text/css" href="../css/style.css">
     </head>
     <body>
-    <div class="">
+    <div class="container">
         <form method="POST" accept-charset="utf-8" class="form-group" action="validacao.php" id="formulario">
             <input type="hidden" name="_method" value="POST">
             <fieldset class="grupo">
@@ -137,6 +137,7 @@
                 </div>
             </fieldset>
             <button type="submit" id="submit">Enviar</button>
+            <button type="submit" id="submit">Voltar</button>
         </form>
     </div>
     </body>

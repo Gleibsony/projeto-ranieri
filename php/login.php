@@ -1,50 +1,59 @@
-    <div id="formulario">
-        <?php 
-			if(!isset($_SESSION['usuario'])){
-		?>
-        <form method="POST" action="?go=logar">
-            <fieldset>
-                <legend>Login</legend>
-                <div>
-                    <label for="usuario">Usuario</label>
-                    <input type="text" name="usuario" id="usuario">
-                </div>
-                <div>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha">
-                </div>
-            </fieldset>
-            <button type="submit" id="enviar">Enviar</button>
-            <a href="php/cadastro.php">Não é cadastro? Registre-se Gratis</a>
-        </form>
+<?php
+session_start();
+?>
+<html>
+    <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <?php 
+			 if(!isset($_SESSION['usuario'])){
+		  ?>
+            <img src="imagen/usuario.png">
+            <form method="POST" action="<?php echo  htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <div class="form-input">
+                    <input type="text" name="email" id="email" placeholder="Digite seu E-mail" required>
+                    </div>
+                    <div class="form-input">
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua Senha" required>
+                    </div>
+                    <input type="submit" id="enviar" name="submit" value="Entrar" class="btn-login"><br/>
+                    <a href="php/cadastro.php">Não é cadastro? Registre-se Gratis</a>
+            </form>
     </div>
+</body>
+</html>
+
+
     <?php
             }
-        if(@$_GET['go'] == "logar"){
-            $user = $_POST['usuario'];
-            $pass = $_POST['senha'];
-            
-            $server = "localhost";
+        if(isset($_POST['submit'])){
+           $server = "localhost";
 	       $username = "root";
 	       $password = "";
 	       $dbname = "lumia";
-
+        
+            $email = $_POST['email'];
+            $pass = md5($_POST['senha']);
 	
 	$link = mysqli_connect ($server, $username, $password, $dbname);
             
-            if(empty($user)){
-                echo "<script>alert('Preencha todos os campos para logar,); histori.back();</script>";
-            }
-            elseif(empty($pass)){
-                echo "<script>alert('Preencha todos os campos para logar,); histori.back();</script>";
-            }else{
-                $result = mysql_query("SELECT * FROM nome WHERE nome = '$user' AND senha = '$pass'");
-                echo mysql_error();
-                $query1 = mysql_num_rows($result);
+             $query= "SELECT `email`, `senha` FROM `usuario`WHERE email = '$email' AND senha = '$pass'";
+                //SELECT `matricula`, `nome`, `sexo`, `datanasc`, `curso`, `periodo`, `email`, `senha`, `id` FROM `usuario` WHERE 1
+                $result = mysqli_query($link, $query);
                 
-                if($query1 == 1){
-                    echo "<script>alert('usuario logado com sucesso'); history.back();</script>";
+                
+            if($result){
+                $row = mysqli_num_rows($result);
+                if($row != 0){
+                    header("location:php/home.php");    
+            }
+                
+                
+                    
                 }
             }
-        }
+        
     ?>

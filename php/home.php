@@ -4,9 +4,9 @@
     </head>
     <body>
     <fieldset>
-        <button type="submit">Cadastrar Tarefas</button>
-        <button type="submit">Remover Tarefas</button>
-        <button type="submit">Editar Tarefas</button>
+        <a href="cadastrar_tarefas.php">Adicionar Tarefas</a>
+        <a href="">Modificar Tarefas</a>
+        <a href="">Exculir Tarefas</a>
     </fieldset>
     </body>
 </html>
